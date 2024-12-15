@@ -1,0 +1,420 @@
+/* Layout */
+
+body {
+    padding-top: 0px;
+    padding-left: 5px;
+    margin-top: 0%;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+}
+  
+.container {
+    display: grid;
+    height: auto;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 2.8% 2% 78% auto;
+    column-gap: 10px;
+    row-gap: 18px;
+    overflow: hidden;
+    justify-content: center;
+    grid-template-areas: 
+        "header header"
+        "nav aside"
+        "nav main"
+        "footer footer";
+}
+
+/* Grid-areas */
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav {
+    grid-area: nav;
+    font-size: 15px;
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    margin-top: 3.5px;
+    margin-right: -200px;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    color: rgb(72, 72, 72);
+    font-size: small;
+}
+
+/* header */
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.botonmenu {
+    margin: 8px 20px 0px 15px;
+}
+
+.buscar {
+    display: flex;
+    align-items: center;
+}
+
+#iconobusqueda {
+    margin-left: -20px;
+    margin-top: 5px;
+}
+
+#iconomicrofono {
+    margin-left: 0px;
+    margin-top: 2px;
+}
+
+#buscar {
+    padding-left: 15px;
+    width: 480px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-color: rgb(207, 207, 207);
+    font-size: 16px;
+}
+
+.notificaciones {
+    display: flex;
+    align-items: center;
+}
+
+#logocrear {
+    margin-right: 10px;
+}
+
+#logonoti {
+    margin-right: 10px;
+}
+
+#logousuario {
+    margin-right: 0px;
+}
+
+/* aside */
+
+.botones {
+    margin-right: -200px;
+    margin-left: 10px;
+}
+
+#boton1 {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px 8px 12px;
+    font-size: 0.9rem;
+}
+
+#boton1:focus {
+    background-color: black;
+    color: white;
+}
+
+/* nav */
+
+.mqimgsnav {
+    display: none;
+}
+
+.navbutton {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/* main */
+
+.anuncio img {
+    width: 98%;
+    height: 100%;
+}
+
+.videoimg {
+    width: 400px;
+}
+
+div.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-right: 18px;
+}
+
+.shortsvideos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/* footer */
+
+#textoprensa {
+    margin-bottom:-0.6%;
+}
+
+#textoautor {
+    margin-bottom:-0.6%;
+}
+
+#textonosotros {
+    margin-bottom:-0.6%;
+}
+
+#textocreadoresanunciar {
+    margin-bottom:-0.6%;
+}
+
+#textodesarrolladores {
+    margin-bottom: 0.2%;
+}
+
+#textocondicionesprivacidad {
+    margin-bottom:-0.6%;
+}
+
+#textopoliticasseguridad {
+    margin-bottom:-0.6%;
+}
+
+#textocomofuncionayoutube {
+    margin-bottom:-0.6%;
+}
+
+#textopruebafuncionesnuevas {
+    margin-bottom:-0.6%;
+}
+
+#textolicencia {
+    margin-top: 2%;
+}
+
+/* MQ */
+
+@media screen and (max-width: 992px) {
+    .container {
+        overflow: hidden;
+        grid-template-columns: 7% 93%;
+        grid-template-rows: 2.2% 2%;
+        column-gap: 15px;
+        justify-content: none;
+        height: 100%;
+        width: 100%;
+}
+
+/* header */
+
+    body {
+        padding-top: 2px;
+        padding-left: 4px;
+    }
+
+    header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 16px;
+        margin-left: -1.5%;
+    }
+
+    #buscar {
+        margin-left: 50px;
+        padding-left: 15px;
+        width: 380px;
+        padding-right: 5px;
+        padding-top: 11.5px;
+        padding-bottom: 9.5px;
+        border-radius: 30px;
+        border-width: 1px;
+        border-color: grey;
+        font-size: 14px;
+    }
+
+    #iconobusqueda {
+        margin-left: -20px;
+        margin-top: 4px;
+    }
+
+    .notificaciones {
+        margin-left: none;
+    }
+
+/* aside */
+
+    .botones {
+        grid-area: aside;
+        display: flex;
+        margin-left: 10px;
+        margin-right: 2000px;
+    }
+
+    .todos {
+        height: 30px;
+        width: 68px;
+        font-size: 12px;
+        padding-left: 1%;
+    }
+    
+    .musica {
+        height: 30px;
+        width: 70px;
+        font-size: 12px;
+    }
+    
+    .mixes {
+        height: 30px;
+        width: 60px;
+        font-size: 12px;
+    }
+    
+    .videojuegos {
+        height: 30px;
+        width: 110px;
+        font-size: 12px;
+    }
+    
+    .lista {
+        height: 30px;
+        width: 185px;
+        font-size: 12px;
+    }
+    
+    .tiempo {
+        height: 30px;
+        width: 125px;
+        font-size: 12px;
+    }
+    
+    .indie {
+        height: 30px;
+        width: 90px;
+        font-size: 12px;
+    }
+    
+    .pop {
+        height: 30px;
+        width: 95px;
+        font-size: 12px;
+    }
+    
+    .rock {
+        height: 30px;
+        width: 138px;
+        font-size: 12px;
+    }
+
+    .folk {
+        height: 30px;
+        width: 110px;
+        font-size: 12px;
+    }
+    
+    .subidos {
+        height: 30px;
+        width: 185px;
+        font-size: 12px;
+    }
+    
+    .vistos {
+        height: 30px;
+        width: 65px;
+        font-size: 12px;
+    }
+
+/* nav */
+
+.mqimgsnav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: -40%;
+    margin-left: 10px;
+}
+
+.navbutton .navbutton1 {
+    display: none;
+}
+.navbutton .textotu {
+    display: none;
+}
+.navbutton .textosuscripciones {
+    display: none;
+}
+.navbutton .textoexplorar {
+    display: none;
+}
+.navbutton .textomasdeyt {
+    display: none;
+}
+
+/* main */
+
+    .anuncio img {
+        width: 98%;
+        height: 100%;
+        margin-bottom: 80px;
+    }
+
+    .videos img {
+        width: 420px;
+    }
+
+    div.videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    
+    .shortsvideos {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+/* footer */
+
+    #footertext {
+        display: none;
+    }
+
+}
